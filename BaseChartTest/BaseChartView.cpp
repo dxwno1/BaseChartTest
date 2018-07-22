@@ -24,7 +24,7 @@ void BaseChartView::initview(int flag)
     {
         series = new QLineSeries();
         series->setPen(QPen(Qt::blue,1,Qt::SolidLine)); //设置画笔
-        series->setColor(QColor(0,0,255));  //设置颜色
+        series->setColor(QColor(255,0,255));  //设置颜色
         series->setName(QString::fromLocal8Bit("折线图"));
 
         axisX = new QValueAxis;
