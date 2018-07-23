@@ -24,8 +24,8 @@ void BaseChartView::initview(int flag)
     {
         series = new QLineSeries();
         series->setPen(QPen(Qt::blue,1,Qt::SolidLine)); //设置画笔
-        series->setColor(QColor(255,0,255));  //设置颜色
-        series->setName(QString::fromLocal8Bit("折线图"));
+        series->setColor(QColor(0,0,255));  //设置颜色
+        series->setName(QString::fromLocal8Bit("测试折线图"));
 
         axisX = new QValueAxis;
         axisX->setRange(0,1000);
@@ -39,8 +39,8 @@ void BaseChartView::initview(int flag)
     {
         scatter = new QScatterSeries();
         scatter->setPen(QPen(Qt::blue,1,Qt::SolidLine)); //设置画笔
-        scatter->setColor(QColor(0,0,255));  //设置颜色
-        scatter->setName(QString::fromLocal8Bit("散点图"));
+        scatter->setColor(QColor(255,0,255));  //设置颜色
+        scatter->setName(QString::fromLocal8Bit("测试散点图"));
         for(int i = 0; i<m_data.size();i++)
         {
             scatter->append(m_data.at(i).x(),m_data.at(i).y());
@@ -54,7 +54,7 @@ void BaseChartView::initview(int flag)
    QChartView *chartView = new QChartView(chart);
    chartView->setRenderHint(QPainter::Antialiasing);
    chartView->setWindowTitle("Simple line chart");
-   chartView->resize(400, 300);
+   chartView->resize(300, 400);
    chartView->show();
 
    ui->BaseChart->addWidget(chartView);
